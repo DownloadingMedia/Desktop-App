@@ -1,0 +1,19 @@
+DownloadMedia v1.1.0
+
+Release highlights:
+- Added animated checkbox controls in Settings and Advanced download options.
+- Added separate release handling for x64, x86, and ARM64 installers.
+- Added Google Drive based update discovery and install flow.
+- Added version-aware changelog loading from the latest changelog text file.
+- Improved update prompts so they show the latest release notes inside the popup.
+- Kept the app locked to a black and white theme.
+- Improved packaging so each installer is built separately per architecture.
+
+Security and reliability:
+- Strengthened update validation around versioned release artifacts.
+- Reduced architecture mismatch risk by isolating installer paths per build target.
+- Improved binary resolution for Windows architectures.
+
+Notes:
+- The updater expects the matching release zip in the architecture folder.
+- The changelog filename must match the version suffix exactly for automatic display.
