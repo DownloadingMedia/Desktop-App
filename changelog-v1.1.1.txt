@@ -1,1 +1,16 @@
+DownloadMedia v1.1.1
 
+Release highlights:
+- Updated checkbox controls to a circular shape for a softer black-and-white UI.
+- Bumped the desktop app version to 1.1.1.
+- Kept the animated checkbox interaction used in Settings and Advanced options.
+- Preserved the separate x64, x86, and ARM64 release flow.
+- Preserved Google Drive based update discovery and changelog loading.
+
+Security and reliability:
+- Continued isolating installer paths by architecture.
+- Continued validating updates against versioned release artifacts.
+
+Notes:
+- The updater expects the matching release zip in the architecture folder.
+- The changelog filename must match the version suffix exactly for automatic display.
