@@ -1,0 +1,22 @@
+DownloadMedia v1.1.2
+
+Release highlights:
+- Updated the desktop greeting cycle to follow precise local time windows.
+- Fixed Settings dropdown sizing so normal menus align with their input width.
+- Kept long codec/transcode dropdowns wide only where longer labels need space.
+- Continued the black-and-white claymorphism UI consistency pass across shared controls.
+- Bumped the desktop app version to 1.1.2.
+
+UI improvements:
+- Greeting text now changes between late night, dawn, early morning, mid-morning, late morning, afternoon, evening, and night.
+- Socket Timeout dropdown now matches the selector width like Bandwidth Limit.
+- Shared Select styling now defaults to trigger-aligned dropdown sizing.
+
+Reliability:
+- Preserved architecture-specific update handling for x64, x86, and ARM64 builds.
+- Preserved GitHub changelog loading for update popups.
+- Continued avoiding repeated failed update download notifications for the same release.
+
+Notes:
+- Upload the matching installer zip for this version in the correct architecture folder.
+- The updater expects this changelog filename to remain changelog-v1.1.2.txt.
