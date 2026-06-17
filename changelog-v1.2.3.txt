@@ -1,0 +1,17 @@
+DownloadMedia v1.2.3
+
+Release highlights:
+- Fixed a critical download corruption issue where downloaded update ZIPs could be incomplete or corrupted.
+- Refactored update progress tracking to use a custom Transform stream to prevent stream race conditions.
+- Resolved Nullsoft installer extraction failures caused by corrupt update package downloads.
+- Bumped the app version to 1.2.3.
+
+UI improvements:
+- Clean and consistent progress reports during update installation.
+
+Reliability:
+- Prevented premature stream flowing during HTTP fetch file downloads.
+
+Notes:
+- Upload the matching installer zip for this version in the correct architecture folder.
+- The updater expects this changelog filename to remain changelog-v1.2.3.txt.
