@@ -1,0 +1,25 @@
+DownloadMedia v1.2.4
+
+Release highlights:
+- Fixed critical update installer corruption caused by Google Drive virus-scan interception.
+- Added acknowledgeAbuse=true to Drive download URL to bypass HTML warning pages for large files.
+- Validated downloaded ZIP magic bytes (PK header) before extraction to detect corrupt downloads early.
+- Validated extracted installer EXE size (must be >1 MB) to skip corrupt or empty files.
+- Fixed installer launching invisibly due to windowsHide flag — NSIS window now shows properly.
+- App now closes automatically after launching the installer so NSIS can replace locked files.
+- Stale ZIP and extracted folder are cleaned up before each retry for a fresh download.
+- Removed auto-install after download — user must now manually click Install & Restart App.
+
+UI improvements:
+- Update panel now shows Extracting Update Package... status during PowerShell decompression.
+- Failed downloads now show a red error panel with the exact error message and a Try Again button.
+- Download Complete label updated to Download Complete — Ready to Install for clarity.
+
+Reliability:
+- Increased yt-dlp socket timeout to 30s (non-Pornhub) and 45s (Pornhub) to prevent cold-start failures.
+- Increased process timeout to 45s (non-Pornhub) and 90s (Pornhub).
+- Fixed checkbox becoming cylindrical on small screens by adding shrink-0.
+
+Notes:
+- Upload the matching installer zip for this version in the correct architecture folder.
+- The updater expects this changelog filename to remain changelog-v1.2.4.txt.
