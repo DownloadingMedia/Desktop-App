@@ -1,5 +1,8 @@
 DownloadMedia v1.0.0 - Production Release
 
+What is DownloadMedia? (Core Features)
+DownloadMedia is a powerful, native desktop media downloader designed to extract audio and video from the internet at maximum speed with zero ads or throttling.
+
 Release highlights:
 - First official production release of DownloadMedia!
 - Made tooltips for "Supported Platforms" fully responsive and bounds-clamped to prevent overlapping the sidebar or clipping off-screen.
@@ -9,6 +12,17 @@ Release highlights:
 - Fixed encoding issues where middle dots rendered as Â·.
 - Safe update downloader implementation with auto-cleanup of cache folders.
 
+Features:
+- Universal Platform Support: Download content from over 20+ platforms including YouTube, Instagram, TikTok (No Watermark), Twitter/X, Facebook, Reddit, Vimeo, SoundCloud, and Twitch.
+- Extreme Quality (Up to 8K): Extract videos in their absolute highest native quality (4320p 8K, 2160p 4K, 1440p 2K, and 1080p HD). 
+- Audio Extraction: Convert any video directly to crystal-clear audio formats including 320kbps MP3, FLAC, WAV, and M4A.
+- Multi-Threaded Engine: Advanced multi-part downloading pipelines powered by native binaries (yt-dlp/ffmpeg) to max out your internet connection.
+- Built-in Queue Manager: Track multiple downloads at once. See exactly which file is currently downloading, active transfer speeds, total file sizes, and estimated time remaining.
+- Zero Bloatware & Ad-Free: 100% free forever. No premium tiers, no hidden paywalls, and absolutely no ads inside the application.
+- Built-in Media Player: Watch and preview your downloaded media directly inside the app.
+
 Notes:
 - Upload the matching installer zip for this version in the correct architecture folder.
+- Windows (.exe) release is available now!
+- macOS (.dmg) and Linux (.AppImage) releases are marked as "Coming soon" and will be available in the near future.
 - The updater expects this changelog filename to remain changelog-v1.0.0.txt.
