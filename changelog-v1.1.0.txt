@@ -1,0 +1,10 @@
+DownloadMedia v1.1.0 - Minor Update
+
+Release highlights:
+- Fixed the in-built player forward skip button that incorrectly jumped 30 seconds ahead instead of exactly 10 seconds.
+- Added a file size safety lock to the "Play Direct Link" feature. Direct streaming is now explicitly disabled when the source video exceeds 150MB to prevent memory constraints.
+- Various stability improvements and UI refinements under the hood.
+
+Notes:
+- Upload the matching installer zip for this version in the correct architecture folder.
+- The updater expects this changelog filename to remain changelog-v1.1.0.txt.
