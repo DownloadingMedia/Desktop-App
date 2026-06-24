@@ -1,0 +1,7 @@
+Fixes:
+- Fixed a bug where the app would not display the update popup when manually clicking "Check for Updates" if a background check had previously run.
+- Fixed the Windows uninstaller so that clicking "Yes" correctly terminates background processes (yt-dlp, ffmpeg, ffprobe) and completely cleans up downloaded core components and user settings.
+
+Improvements:
+- Added accurate file size estimation for HLS streams (e.g., PornHub) by calculating the size based on the stream's bitrate and duration.
+- The inline "Preview Stream" button is now safely disabled for video files larger than 150MB to prevent memory issues. Audio streams have no size limit.
