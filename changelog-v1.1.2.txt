@@ -1,0 +1,11 @@
+DownloadMedia v1.1.2 - Patch Update
+
+Fixes:
+- Fixed a critical metadata caching bug where different videos on query-parameter-based platforms (e.g. Pornhub) would incorrectly return cached metadata from a previously loaded video, showing the wrong title, thumbnail, and stream link.
+- Fixed the Windows uninstaller so that clicking "Yes" now correctly deletes the actual AppData folder (download-media) and Local AppData updater folder (download-media-updater), which previously had mismatched directory names causing binaries to not be cleaned up.
+- Fixed the download progress splash window not appearing on first launch after a fresh install because the old binaries were never deleted during uninstallation.
+
+Improvements:
+- Preview Stream button now directly opens the dedicated player window instead of embedding an inline player below the controls, removing the extra "Open in Player" step.
+- The separate player window is reused when already open — clicking Preview Stream again updates the existing player to the new stream instead of opening a duplicate window.
+- The download progress splash window is now always shown on top of other windows with focus so it is visible during core component setup.
