@@ -19,6 +19,7 @@ Fixes:
 - Fixed a bug where selecting "Normalize Audio (loudnorm)" caused download failures (HTTP 416 range error) during the stream-merging process. It now correctly transcodes the audio stream to a compatible codec (AAC/Opus) when applying filters instead of attempting to copy it.
 - Fixed a "Source file not found" error when clicking "Save File" after a download has been completed for more than 5 minutes. The temporary file auto-cleanup sweep has been extended from 5 minutes to 1 hour to give users ample time to save completed downloads.
 - Fixed a bug where completed download jobs incorrectly identified the `.dm-state` sidecar file as the final media output file due to matching UUID prefixes, causing "Source file not found" errors when saving. It now explicitly ignores state and temporary files (.dm-state, .ytdl, .part) during output scanning.
-
-
-
+- Fixed missing thumbnails when downloading audio-only streams (e.g., SoundCloud) as video. Updated FFprobe parser to properly ignore "attached_pic" streams (embedded cover art) and forcefully trigger the thumbnail-to-video conversion.
+- Fixed a bug where HTTP thumbnails caused the FFmpeg image2 demuxer to silently fail and drop the video track; thumbnails are now securely downloaded to a temporary local file before merging.
+- Fixed an issue where clicking "Preview Stream" discarded thumbnail metadata in the backend API router.
+- Fixed a UI crash when proxying data URIs and local placeholder thumbnails.
