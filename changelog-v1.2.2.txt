@@ -1,0 +1,24 @@
+DownloadMedia v1.2.2 - Feature & Performance Update
+
+Features:
+- Added "Auto (Source FPS)" support as the default frame rate option in both the settings and downloader page. This automatically detects and retains the source video's native frame rate (e.g., 23.976, 24, 25, 29.97 fps) without capping.
+- Integrated comprehensive Smart & Performance features:
+  * Zero-Copy File Writes for faster disk writing.
+  * Memory-Mapped Downloads to reduce system resource overhead.
+  * Crash Recovery & Persistent Download State to protect downloads.
+  * Download Database Indexing for fast query retrieval.
+  * Automatic Resume After Reboot to easily pick up where you left off.
+  * Disk Space Prediction to avoid mid-download out-of-disk failures.
+  * File Integrity Verification to guarantee corruption-free media files.
+  * Smart Cache Management & Low Memory Mode to run efficiently on lower-spec hardware.
+
+Fixes:
+- Fixed a bug on the website blog where double asterisks (**) failed to render text as bold.
+- Fixed a Content Security Policy (CSP) issue on the website that blocked script execution due to 'eval' restrictions.
+- Fixed the website download counter getting stuck at 0 on refresh by instantly serving the cached count from localStorage while refreshing the API count in the background.
+- Fixed a bug where selecting "Normalize Audio (loudnorm)" caused download failures (HTTP 416 range error) during the stream-merging process. It now correctly transcodes the audio stream to a compatible codec (AAC/Opus) when applying filters instead of attempting to copy it.
+- Fixed a "Source file not found" error when clicking "Save File" after a download has been completed for more than 5 minutes. The temporary file auto-cleanup sweep has been extended from 5 minutes to 1 hour to give users ample time to save completed downloads.
+- Fixed a bug where completed download jobs incorrectly identified the `.dm-state` sidecar file as the final media output file due to matching UUID prefixes, causing "Source file not found" errors when saving. It now explicitly ignores state and temporary files (.dm-state, .ytdl, .part) during output scanning.
+
+
+
