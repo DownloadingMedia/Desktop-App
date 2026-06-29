@@ -1,0 +1,13 @@
+DownloadMedia v1.2.3 - Subtitle & Metadata Improvements
+
+Features:
+- Subtitle Externalization: Changed "Download & Embed Subtitles" behavior to download clean, external SubRip (.srt) subtitle files instead of forcibly embedding them into the video container.
+- Automated Sidecar Transfer (Desktop): The Electron desktop app now automatically scans for and saves corresponding subtitle files alongside your video file in the same destination folder.
+- Subtitle Downloads (Web): Added separate "Save Subtitles (.srt)" buttons in the browser interface to allow downloading the subtitles file separately from the media file.
+
+Fixes:
+- Fixed a bug where YouTube and SoundCloud downloads with subtitles enabled would get stuck at 98% on "Generating video from thumbnail" by ignoring subtitle and image sidecar formats in the candidate scanner.
+- Fixed a bug where HTTP thumbnails caused the FFmpeg image2 demuxer to silently fail and drop the video track; thumbnails are now securely downloaded to a temporary local file before merging.
+- Fixed an issue where the "Preview Stream" endpoint discarded thumbnail metadata in the backend API router.
+- Fixed a UI crash when proxying data URIs and local placeholder thumbnails.
+- Fixed a bug where embedded video metadata displayed corrupt, long numbers for the "Year" field (such as 55020) in Windows Media Player and Windows Explorer. The upload date string (YYYYMMDD) is now automatically parsed and formatted into standard YYYY-MM-DD before embedding.
